@@ -34,8 +34,9 @@ body {
   color: var(--ink);
 }
 
-body.pad-open {
-  overflow-x: hidden;
+body.pad-open,
+body.modal-open {
+  overflow: hidden;
 }
 
 a {
@@ -520,14 +521,12 @@ p {
   border-bottom: 1px solid rgba(32, 26, 22, 0.11);
   border-radius: 0;
   background: transparent;
-  transition: background-color 160ms ease, padding 160ms ease;
+  transition: background-color 160ms ease;
 }
 
 .pizza-card:hover,
 .pizza-card.is-selected {
   background: rgba(191, 67, 47, 0.055);
-  box-shadow: none;
-  transform: none;
 }
 
 .card-head {
@@ -575,33 +574,92 @@ p {
   display: none;
 }
 
-.tag-row span {
-  padding: 4px 7px;
-  border-radius: 6px;
-  background: #f2efe8;
-  color: #625851;
-  font-size: 0.76rem;
-  font-weight: 800;
-}
-
-.select-line {
-  min-height: 30px;
-  width: fit-content;
-  padding-top: 0;
+.card-footer {
   display: flex;
   align-items: center;
-  gap: 10px;
-  border-top: 0;
-  color: var(--blue);
-  font-size: 0.88rem;
-  font-weight: 800;
-  cursor: pointer;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 4px;
 }
 
-.select-line input {
+.ingredients-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.customize-btn {
+  padding: 4px;
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: color 0.2s;
+}
+
+.customize-btn:hover {
+  color: var(--tomato);
+  background: rgba(191, 67, 47, 0.05);
+}
+
+.customize-btn svg {
   width: 18px;
   height: 18px;
-  accent-color: var(--tomato);
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.qty-btn {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--tomato);
+  font-weight: 900;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.qty-btn:hover {
+  border-color: var(--tomato);
+  background: rgba(191, 67, 47, 0.05);
+}
+
+.qty-btn.plus {
+  background: var(--tomato);
+  color: #fff;
+  border-color: var(--tomato);
+}
+
+.qty-btn.plus:hover {
+  background: var(--tomato-dark);
+}
+
+.qty-display {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 800;
+  color: var(--blue);
+}
+
+.pizza-icons {
+  font-size: 1.1rem;
+  letter-spacing: -2px;
 }
 
 .notepad-toggle {
@@ -697,7 +755,7 @@ p {
 }
 
 .pad-list li {
-  padding: 10px;
+  padding: 12px;
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 8px;
@@ -705,24 +763,34 @@ p {
   border-radius: 8px;
 }
 
-.pad-list strong {
-  display: block;
+.pad-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
-.pad-list span {
+.pad-item-title {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 850;
+}
+
+.pad-item-desc {
+  font-size: 0.82rem;
+  color: var(--muted);
+  font-style: italic;
+  line-height: 1.3;
+}
+
+.pad-item-price {
   color: var(--muted);
   font-size: 0.88rem;
+  font-weight: normal;
 }
 
-.pad-list button {
-  width: 30px;
-  height: 30px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: #fff;
-  color: var(--tomato-dark);
-  font-weight: 900;
-  cursor: pointer;
+.pad-item-controls {
+  display: flex;
+  align-items: center;
 }
 
 .pad-empty {
@@ -749,6 +817,174 @@ p {
   font-size: 0.84rem;
 }
 
+/* Modal Customization */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(32, 26, 22, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+.modal-overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content {
+  background: var(--paper);
+  width: min(500px, 100%);
+  max-height: 90vh;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow);
+  transform: translateY(20px);
+  transition: transform 0.2s;
+}
+
+.modal-overlay.is-open .modal-content {
+  transform: translateY(0);
+}
+
+.modal-header {
+  padding: 20px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.modal-body {
+  padding: 0;
+  overflow-y: auto;
+}
+
+.modal-footer {
+  padding: 16px 20px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.collapse-section {
+  border-bottom: 1px solid var(--line);
+}
+
+.collapse-trigger {
+  width: 100%;
+  padding: 16px 20px;
+  background: transparent;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 800;
+  color: var(--blue);
+  cursor: pointer;
+  text-align: left;
+}
+
+.collapse-trigger::after {
+  content: "↓";
+  font-size: 1.2rem;
+  transition: transform 0.2s;
+}
+
+.collapse-section.is-open .collapse-trigger::after {
+  transform: rotate(180deg);
+}
+
+.collapse-content {
+  display: none;
+  padding: 0 20px 20px;
+}
+
+.collapse-section.is-open .collapse-content {
+  display: block;
+}
+
+.ingredient-list {
+  display: grid;
+  gap: 8px;
+}
+
+.ingredient-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.ingredient-item:not(:last-child) {
+  border-bottom: 1px solid rgba(32, 26, 22, 0.05);
+}
+
+.remove-ing-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--tomato);
+  background: transparent;
+  color: var(--tomato);
+  font-weight: bold;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.remove-ing-btn:hover {
+  background: var(--tomato);
+  color: #fff;
+}
+
+.add-ing-search {
+  margin-bottom: 12px;
+}
+
+.add-ing-search input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.ing-checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+.ing-checkbox-item input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--basil);
+}
+
+.ing-price {
+  margin-left: auto;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
 @media (max-width: 1020px) {
   h1 {
     font-size: 3.35rem;
@@ -757,7 +993,6 @@ p {
   h2 {
     font-size: 2rem;
   }
-
 }
 
 @media (max-width: 900px) {

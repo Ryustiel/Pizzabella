@@ -6,45 +6,17 @@
     <title>Menu Pizza-Bella Lanester | Pizzas à emporter</title>
     <meta
       name="description"
-      content="Menu Pizza-Bella Lanester : pizzas base tomate, base crème fraîche, soufflés, menu enfant et boissons. Recherche par ingrédient et calepin de commande."
+      content="Menu Pizza-Bella Lanester : pizzas base tomate, base crème fraîche, soufflés, menu enfant et boissons. Personnalisez vos pizzas et préparez votre commande."
     >
     <link rel="canonical" href="https://pizzabella.rouf.me/menu.html">
     <meta property="og:title" content="Menu Pizza-Bella Lanester">
-    <meta property="og:description" content="Consultez les pizzas disponibles, recherchez par ingrédient et gardez vos choix dans un calepin.">
+    <meta property="og:description" content="Consultez les pizzas disponibles, personnalisez vos ingrédients et gardez vos choix dans un calepin.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pizzabella.rouf.me/menu.html">
     <meta property="og:image" content="https://static.wixstatic.com/media/843343_ccfe324e93fd4e18b210bcc2876e4890~mv2_d_2775_1979_s_2.jpg/v1/fill/w_1200,h_860,al_c,q_85,enc_avif,quality_auto/843343_ccfe324e93fd4e18b210bcc2876e4890~mv2_d_2775_1979_s_2.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://static.wixstatic.com">
-    <link rel="stylesheet" href="styles.css?v=20260521-mobile">
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Menu",
-        "@id": "https://pizzabella.rouf.me/menu.html#menu",
-        "name": "Menu Pizza-Bella Lanester",
-        "url": "https://pizzabella.rouf.me/menu.html",
-        "inLanguage": "fr-FR",
-        "hasMenuSection": [
-          {
-            "@type": "MenuSection",
-            "name": "Pizzas base sauce tomate 33 cm"
-          },
-          {
-            "@type": "MenuSection",
-            "name": "Pizzas base crème fraîche 33 cm"
-          },
-          {
-            "@type": "MenuSection",
-            "name": "Les soufflés"
-          },
-          {
-            "@type": "MenuSection",
-            "name": "Menu enfant et boissons"
-          }
-        ]
-      }
-    </script>
+    <link rel="stylesheet" href="styles.css?v=20260522-custom">
   </head>
   <body class="menu-page">
     <header class="site-header">
@@ -91,8 +63,7 @@
           <p class="kicker">Menu à emporter</p>
           <h1>Les pizzas Pizza-Bella</h1>
           <p>
-            Pizzas artisanales de 33 cm, ingrédients frais et commande par
-            téléphone au <a href="tel:+33297893599">02 97 89 35 99</a>.
+            Pizzas artisanales de 33 cm. Utilisez le crayon ✎ pour personnaliser vos ingrédients.
           </p>
         </div>
       </section>
@@ -125,207 +96,439 @@
             <p>Ingrédient supplémentaire : 1,50 €. Saint-Jacques, saumon ou andouille : 2,50 €.</p>
           </div>
           <div class="pizza-grid">
-            <article class="pizza-card" data-menu-item data-id="roma" data-name="Roma" data-price="10.50" data-keywords="tomate classique jambon tomates fromage simple traditionnelle">
+            <article class="pizza-card" data-menu-item data-id="roma" data-name="Roma" data-price="10.50" data-ingredients="Sauce tomate, fromage, jambon, tomates" data-keywords="tomate classique jambon tomates fromage simple traditionnelle">
               <div class="card-head"><h3>Roma</h3><strong>10,50 €</strong></div>
-              <p>Sauce tomate, fromage, jambon, tomates.</p>
-              <div class="tag-row"><span>classique</span><span>jambon</span><span>tomate</span></div>
-              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+              <div class="card-footer">
+                <div class="ingredients-line">
+                  <span>Sauce tomate, fromage, jambon, tomates.</span>
+                  <button class="customize-btn" type="button" aria-label="Personnaliser Roma" data-customize="roma">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                  </button>
+                </div>
+                <div class="quantity-controls" data-qty-for="roma">
+                  <button class="qty-btn plus" type="button" data-qty-plus="roma">+</button>
+                </div>
+              </div>
             </article>
 
-            <article class="pizza-card" data-menu-item data-id="reine" data-name="Reine" data-price="11.00" data-keywords="tomate reine royale jambon champignons oeuf fromage classique">
+            <article class="pizza-card" data-menu-item data-id="reine" data-name="Reine" data-price="11.00" data-ingredients="Sauce tomate, fromage, jambon, champignons, oeuf" data-keywords="tomate reine royale jambon champignons oeuf fromage classique">
               <div class="card-head"><h3>Reine</h3><strong>11,00 €</strong></div>
-              <p>Sauce tomate, fromage, jambon, champignons, avec ou sans oeuf.</p>
-              <div class="tag-row"><span>classique</span><span>champignons</span><span>oeuf</span></div>
-              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+              <div class="card-footer">
+                <div class="ingredients-line">
+                  <span>Sauce tomate, fromage, jambon, champignons, oeuf.</span>
+                  <button class="customize-btn" type="button" aria-label="Personnaliser Reine" data-customize="reine">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                  </button>
+                </div>
+                <div class="quantity-controls" data-qty-for="reine">
+                  <button class="qty-btn plus" type="button" data-qty-plus="reine">+</button>
+                </div>
+              </div>
             </article>
 
-            <article class="pizza-card" data-menu-item data-id="foresta" data-name="Foresta" data-price="12.50" data-keywords="tomate forestière forestiere jambon champignons lardons persillade fromage">
+            <article class="pizza-card" data-menu-item data-id="foresta" data-name="Foresta" data-price="12.50" data-ingredients="Sauce tomate, fromage, jambon, champignons, lardons, persillade" data-keywords="tomate forestière forestiere jambon champignons lardons persillade fromage">
               <div class="card-head"><h3>Foresta</h3><strong>12,50 €</strong></div>
-              <p>Sauce tomate, fromage, jambon, champignons, lardons, persillade.</p>
-              <div class="tag-row"><span>champignons</span><span>lardons</span><span>persillade</span></div>
-              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+              <div class="card-footer">
+                <div class="ingredients-line">
+                  <span>Sauce tomate, fromage, jambon, champignons, lardons, persillade.</span>
+                  <button class="customize-btn" type="button" aria-label="Personnaliser Foresta" data-customize="foresta">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                  </button>
+                </div>
+                <div class="quantity-controls" data-qty-for="foresta">
+                  <button class="qty-btn plus" type="button" data-qty-plus="foresta">+</button>
+                </div>
+              </div>
             </article>
 
-            <article class="pizza-card" data-menu-item data-id="roquefort" data-name="Roquefort" data-price="12.50" data-keywords="tomate roquefort fromage bleu jambon champignons">
+            <article class="pizza-card" data-menu-item data-id="roquefort" data-name="Roquefort" data-price="12.50" data-ingredients="Sauce tomate, fromage, jambon, champignons, roquefort" data-keywords="tomate roquefort fromage bleu jambon champignons">
               <div class="card-head"><h3>Roquefort</h3><strong>12,50 €</strong></div>
-              <p>Sauce tomate, fromage, jambon, champignons, roquefort.</p>
-              <div class="tag-row"><span>fromage</span><span>roquefort</span><span>jambon</span></div>
-              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+              <div class="card-footer">
+                <div class="ingredients-line">
+                  <span>Sauce tomate, fromage, jambon, champignons, roquefort.</span>
+                  <button class="customize-btn" type="button" aria-label="Personnaliser Roquefort" data-customize="roquefort">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                  </button>
+                </div>
+                <div class="quantity-controls" data-qty-for="roquefort">
+                  <button class="qty-btn plus" type="button" data-qty-plus="roquefort">+</button>
+                </div>
+              </div>
             </article>
 
-            <article class="pizza-card" data-menu-item data-id="4-fromages" data-name="4 Fromages" data-price="13.00" data-keywords="tomate quatre fromages 4 fromage chèvre chevre gorgonzola cantal végétarien vegetarien">
+            <article class="pizza-card" data-menu-item data-id="4-fromages" data-name="4 Fromages" data-price="13.00" data-ingredients="Sauce tomate, fromage à pizza, chèvre, gorgonzola, cantal" data-keywords="tomate quatre fromages 4 fromage chèvre chevre gorgonzola cantal végétarien vegetarien">
               <div class="card-head"><h3>4 Fromages</h3><strong>13,00 €</strong></div>
-              <p>Sauce tomate, fromage à pizza, chèvre, gorgonzola, cantal.</p>
-              <div class="tag-row"><span>fromage</span><span>chèvre</span><span>végétarien</span></div>
-              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+              <div class="card-footer">
+                <div class="ingredients-line">
+                  <span>Sauce tomate, fromage à pizza, chèvre, gorgonzola, cantal.</span>
+                  <button class="customize-btn" type="button" aria-label="Personnaliser 4 Fromages" data-customize="4-fromages">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                  </button>
+                </div>
+                <div class="quantity-controls" data-qty-for="4-fromages">
+                  <button class="qty-btn plus" type="button" data-qty-plus="4-fromages">+</button>
+                </div>
+              </div>
             </article>
 
-            <article class="pizza-card" data-menu-item data-id="cinq-fromages" data-name="Cinq fromages" data-price="13.50" data-keywords="tomate cinq 5 fromages chèvre chevre gorgonzola cantal roquefort végétarien vegetarien">
+            <article class="pizza-card" data-menu-item data-id="cinq-fromages" data-name="Cinq fromages" data-price="13.50" data-ingredients="Sauce tomate, fromage à pizza, chèvre, gorgonzola, cantal, roquefort" data-keywords="tomate cinq 5 fromages chèvre chevre gorgonzola cantal roquefort végétarien vegetarien">
               <div class="card-head"><h3>Cinq fromages</h3><strong>13,50 €</strong></div>
-              <p>Sauce tomate, fromage à pizza, chèvre, gorgonzola, cantal, roquefort.</p>
-              <div class="tag-row"><span>fromage</span><span>roquefort</span><span>végétarien</span></div>
-              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+              <div class="card-footer">
+                <div class="ingredients-line">
+                  <span>Sauce tomate, fromage à pizza, chèvre, gorgonzola, cantal, roquefort.</span>
+                  <button class="customize-btn" type="button" aria-label="Personnaliser Cinq fromages" data-customize="cinq-fromages">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                  </button>
+                </div>
+                <div class="quantity-controls" data-qty-for="cinq-fromages">
+                  <button class="qty-btn plus" type="button" data-qty-plus="cinq-fromages">+</button>
+                </div>
+              </div>
             </article>
 
-            <article class="pizza-card" data-menu-item data-id="quatre-saisons" data-name="Quatre saisons" data-price="12.50" data-keywords="tomate quatre saisons 4 saisons jambon champignons poivrons artichaut olives légumes legumes">
+            <article class="pizza-card" data-menu-item data-id="quatre-saisons" data-name="Quatre saisons" data-price="12.50" data-ingredients="Sauce tomate, fromage, jambon, champignons, poivrons, artichaut, olives" data-keywords="tomate quatre saisons 4 saisons jambon champignons poivrons artichaut olives légumes legumes">
               <div class="card-head"><h3>Quatre saisons</h3><strong>12,50 €</strong></div>
-              <p>Sauce tomate, fromage, jambon, champignons, poivrons, artichaut, olives.</p>
-              <div class="tag-row"><span>légumes</span><span>jambon</span><span>olives</span></div>
-              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+              <div class="card-footer">
+                <div class="ingredients-line">
+                  <span>Sauce tomate, fromage, jambon, champignons, poivrons, artichaut, olives.</span>
+                  <button class="customize-btn" type="button" aria-label="Personnaliser Quatre saisons" data-customize="quatre-saisons">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                  </button>
+                </div>
+                <div class="quantity-controls" data-qty-for="quatre-saisons">
+                  <button class="qty-btn plus" type="button" data-qty-plus="quatre-saisons">+</button>
+                </div>
+              </div>
             </article>
 
-            <article class="pizza-card" data-menu-item data-id="bergere" data-name="Bergère" data-price="12.50" data-keywords="tomate bergere bergère lardons chèvre chevre chorizo fromage">
+            <article class="pizza-card" data-menu-item data-id="bergere" data-name="Bergère" data-price="12.50" data-ingredients="Sauce tomate, fromage, lardons, chèvre, chorizo" data-keywords="tomate bergere bergère lardons chèvre chevre chorizo fromage">
               <div class="card-head"><h3>Bergère</h3><strong>12,50 €</strong></div>
-              <p>Sauce tomate, fromage, lardons, chèvre, chorizo.</p>
-              <div class="tag-row"><span>chèvre</span><span>chorizo</span><span>lardons</span></div>
-              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+              <div class="card-footer">
+                <div class="ingredients-line">
+                  <span>Sauce tomate, fromage, lardons, chèvre, chorizo.</span>
+                  <button class="customize-btn" type="button" aria-label="Personnaliser Bergère" data-customize="bergere">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                  </button>
+                </div>
+                <div class="quantity-controls" data-qty-for="bergere">
+                  <button class="qty-btn plus" type="button" data-qty-plus="bergere">+</button>
+                </div>
+              </div>
             </article>
 
-            <article class="pizza-card" data-menu-item data-id="al-tono" data-name="Al tono" data-price="12.50" data-keywords="tomate thon tonno poisson oignons poivrons persillade fromage">
+            <article class="pizza-card" data-menu-item data-id="al-tono" data-name="Al tono" data-price="12.50" data-ingredients="Sauce tomate, fromage, thon, oignons, poivrons, persillade" data-keywords="tomate thon tonno poisson oignons poivrons persillade fromage">
               <div class="card-head"><h3>Al tono</h3><strong>12,50 €</strong></div>
-              <p>Sauce tomate, fromage, thon, oignons, poivrons, persillade.</p>
-              <div class="tag-row"><span>thon</span><span>poivrons</span><span>persillade</span></div>
-              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+              <div class="card-footer">
+                <div class="ingredients-line">
+                  <span>Sauce tomate, fromage, thon, oignons, poivrons, persillade.</span>
+                  <button class="customize-btn" type="button" aria-label="Personnaliser Al tono" data-customize="al-tono">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                  </button>
+                </div>
+                <div class="quantity-controls" data-qty-for="al-tono">
+                  <button class="qty-btn plus" type="button" data-qty-plus="al-tono">+</button>
+                </div>
+              </div>
             </article>
 
-            <article class="pizza-card" data-menu-item data-id="la-bolo" data-name="La bolo" data-price="12.50" data-keywords="tomate bolo bolognaise viande hachée hachee champignons fromage">
+            <article class="pizza-card" data-menu-item data-id="la-bolo" data-name="La bolo" data-price="12.50" data-ingredients="Sauce tomate, fromage, champignons, bolognaise" data-keywords="tomate bolo bolognaise viande hachée hachee champignons fromage">
               <div class="card-head"><h3>La bolo</h3><strong>12,50 €</strong></div>
-              <p>Sauce tomate, fromage, champignons, bolognaise.</p>
-              <div class="tag-row"><span>bolognaise</span><span>champignons</span><span>viande</span></div>
-              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+              <div class="card-footer">
+                <div class="ingredients-line">
+                  <span>Sauce tomate, fromage, champignons, bolognaise.</span>
+                  <button class="customize-btn" type="button" aria-label="Personnaliser La bolo" data-customize="la-bolo">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                  </button>
+                </div>
+                <div class="quantity-controls" data-qty-for="la-bolo">
+                  <button class="qty-btn plus" type="button" data-qty-plus="la-bolo">+</button>
+                </div>
+              </div>
             </article>
 
-            <article class="pizza-card" data-menu-item data-id="bayonne" data-name="Bayonne" data-price="13.00" data-keywords="tomate bayonne jambon de pays tomates fraîches fraiches chèvre chevre fromage">
+            <article class="pizza-card" data-menu-item data-id="bayonne" data-name="Bayonne" data-price="13.00" data-ingredients="Sauce tomate, fromage, jambon de pays, tomates fraîches, chèvre" data-keywords="tomate bayonne jambon de pays tomates fraîches fraiches chèvre chevre fromage">
               <div class="card-head"><h3>Bayonne</h3><strong>13,00 €</strong></div>
-              <p>Sauce tomate, fromage, jambon de pays, tomates fraîches, chèvre.</p>
-              <div class="tag-row"><span>jambon de pays</span><span>chèvre</span><span>tomates</span></div>
-              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+              <div class="card-footer">
+                <div class="ingredients-line">
+                  <span>Sauce tomate, fromage, jambon de pays, tomates fraîches, chèvre.</span>
+                  <button class="customize-btn" type="button" aria-label="Personnaliser Bayonne" data-customize="bayonne">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                  </button>
+                </div>
+                <div class="quantity-controls" data-qty-for="bayonne">
+                  <button class="qty-btn plus" type="button" data-qty-plus="bayonne">+</button>
+                </div>
+              </div>
             </article>
 
-            <article class="pizza-card" data-menu-item data-id="la-texas" data-name="La texas" data-price="13.00" data-keywords="tomate texas texane bolognaise oignons poivrons persillade épices epices viande">
+            <article class="pizza-card" data-menu-item data-id="la-texas" data-name="La texas" data-price="13.00" data-ingredients="Sauce tomate, fromage, bolognaise, oignons, poivrons, persillade, épices" data-keywords="tomate texas texane bolognaise oignons poivrons persillade épices epices viande">
               <div class="card-head"><h3>La texas</h3><strong>13,00 €</strong></div>
-              <p>Sauce tomate, fromage, bolognaise, oignons, poivrons, persillade, épices.</p>
-              <div class="tag-row"><span>épicée</span><span>bolognaise</span><span>poivrons</span></div>
-              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+              <div class="card-footer">
+                <div class="ingredients-line">
+                  <span>Sauce tomate, fromage, bolognaise, oignons, poivrons, persillade, épices.</span>
+                  <button class="customize-btn" type="button" aria-label="Personnaliser La texas" data-customize="la-texas">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                  </button>
+                </div>
+                <div class="quantity-controls" data-qty-for="la-texas">
+                  <button class="qty-btn plus" type="button" data-qty-plus="la-texas">+</button>
+                </div>
+              </div>
             </article>
 
-            <article class="pizza-card" data-menu-item data-id="vegetarienne" data-name="Végétarienne" data-price="12.50" data-keywords="tomate végétarienne vegetarienne veggie légumes legumes poivrons champignons artichaut oignons olives sans viande">
+            <article class="pizza-card" data-menu-item data-id="vegetarienne" data-name="Végétarienne" data-price="12.50" data-ingredients="Sauce tomate, fromage, poivrons, champignons, artichaut, oignons, olives" data-keywords="tomate végétarienne vegetarienne veggie légumes legumes poivrons champignons artichaut oignons olives sans viande">
               <div class="card-head"><h3>Végétarienne</h3><strong>12,50 €</strong></div>
-              <p>Sauce tomate, fromage, poivrons, champignons, artichaut, oignons, olives.</p>
-              <div class="tag-row"><span>végétarien</span><span>légumes</span><span>olives</span></div>
-              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+              <div class="card-footer">
+                <div class="ingredients-line">
+                  <span>Sauce tomate, fromage, poivrons, champignons, artichaut, oignons, olives.</span>
+                  <button class="customize-btn" type="button" aria-label="Personnaliser Végétarienne" data-customize="vegetarienne">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                  </button>
+                </div>
+                <div class="quantity-controls" data-qty-for="vegetarienne">
+                  <button class="qty-btn plus" type="button" data-qty-plus="vegetarienne">+</button>
+                </div>
+              </div>
             </article>
 
-            <article class="pizza-card" data-menu-item data-id="marrakech" data-name="Marrakech" data-price="13.00" data-keywords="tomate marrakech orientale merguez chorizo oignons poivrons épicée epice fromage">
+            <article class="pizza-card" data-menu-item data-id="marrakech" data-name="Marrakech" data-price="13.00" data-ingredients="Sauce tomate, fromage, merguez, chorizo, oignons, poivrons" data-keywords="tomate marrakech orientale merguez chorizo oignons poivrons épicée epice fromage">
               <div class="card-head"><h3>Marrakech</h3><strong>13,00 €</strong></div>
-              <p>Sauce tomate, fromage, merguez, chorizo, oignons, poivrons.</p>
-              <div class="tag-row"><span>merguez</span><span>chorizo</span><span>épicée</span></div>
-              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+              <div class="card-footer">
+                <div class="ingredients-line">
+                  <span>Sauce tomate, fromage, merguez, chorizo, oignons, poivrons.</span>
+                  <button class="customize-btn" type="button" aria-label="Personnaliser Marrakech" data-customize="marrakech">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                  </button>
+                </div>
+                <div class="quantity-controls" data-qty-for="marrakech">
+                  <button class="qty-btn plus" type="button" data-qty-plus="marrakech">+</button>
+                </div>
+              </div>
             </article>
 
-            <article class="pizza-card" data-menu-item data-id="sicilienne" data-name="Sicilienne" data-price="12.50" data-keywords="tomate sicilienne lardons jambon merguez viande fromage">
+            <article class="pizza-card" data-menu-item data-id="sicilienne" data-name="Sicilienne" data-price="12.50" data-ingredients="Sauce tomate, fromage, lardons, jambon, merguez" data-keywords="tomate sicilienne lardons jambon merguez viande fromage">
               <div class="card-head"><h3>Sicilienne</h3><strong>12,50 €</strong></div>
-              <p>Sauce tomate, fromage, lardons, jambon, merguez.</p>
-              <div class="tag-row"><span>jambon</span><span>merguez</span><span>lardons</span></div>
-              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+              <div class="card-footer">
+                <div class="ingredients-line">
+                  <span>Sauce tomate, fromage, lardons, jambon, merguez.</span>
+                  <button class="customize-btn" type="button" aria-label="Personnaliser Sicilienne" data-customize="sicilienne">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                  </button>
+                </div>
+                <div class="quantity-controls" data-qty-for="sicilienne">
+                  <button class="qty-btn plus" type="button" data-qty-plus="sicilienne">+</button>
+                </div>
+              </div>
             </article>
 
-            <article class="pizza-card" data-menu-item data-id="lanesterienne" data-name="Lanesterienne" data-price="13.50" data-keywords="tomate lanesterienne lanestérienne saint jacques st jacques champignons oignons lardons persillade mer">
+            <article class="pizza-card" data-menu-item data-id="lanesterienne" data-name="Lanesterienne" data-price="13.50" data-ingredients="Sauce tomate, fromage, Saint-Jacques, champignons, oignons, lardons, persillade" data-keywords="tomate lanesterienne lanestérienne saint jacques st jacques champignons oignons lardons persillade mer">
               <div class="card-head"><h3>Lanesterienne</h3><strong>13,50 €</strong></div>
-              <p>Sauce tomate, fromage, Saint-Jacques, champignons, oignons, lardons, persillade.</p>
-              <div class="tag-row"><span>Saint-Jacques</span><span>lardons</span><span>persillade</span></div>
-              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+              <div class="card-footer">
+                <div class="ingredients-line">
+                  <span>Sauce tomate, fromage, Saint-Jacques, champignons, oignons, lardons, persillade.</span>
+                  <button class="customize-btn" type="button" aria-label="Personnaliser Lanesterienne" data-customize="lanesterienne">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                  </button>
+                </div>
+                <div class="quantity-controls" data-qty-for="lanesterienne">
+                  <button class="qty-btn plus" type="button" data-qty-plus="lanesterienne">+</button>
+                </div>
+              </div>
             </article>
 
-            <article class="pizza-card" data-menu-item data-id="pizza-de-la-mer" data-name="Pizza de la mer" data-price="14.50" data-keywords="tomate mer saumon saint jacques st jacques crevettes roses poisson fruits de mer persillade">
+            <article class="pizza-card" data-menu-item data-id="pizza-de-la-mer" data-name="Pizza de la mer" data-price="14.50" data-ingredients="Sauce tomate, fromage, saumon, Saint-Jacques, crevettes roses, persillade" data-keywords="tomate mer saumon saint jacques st jacques crevettes roses poisson fruits de mer persillade">
               <div class="card-head"><h3>Pizza de la mer</h3><strong>14,50 €</strong></div>
-              <p>Sauce tomate, fromage, saumon, Saint-Jacques, crevettes roses, persillade.</p>
-              <div class="tag-row"><span>mer</span><span>saumon</span><span>crevettes</span></div>
-              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+              <div class="card-footer">
+                <div class="ingredients-line">
+                  <span>Sauce tomate, fromage, saumon, Saint-Jacques, crevettes roses, persillade.</span>
+                  <button class="customize-btn" type="button" aria-label="Personnaliser Pizza de la mer" data-customize="pizza-de-la-mer">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                  </button>
+                </div>
+                <div class="quantity-controls" data-qty-for="pizza-de-la-mer">
+                  <button class="qty-btn plus" type="button" data-qty-plus="pizza-de-la-mer">+</button>
+                </div>
+              </div>
             </article>
 
-            <article class="pizza-card" data-menu-item data-id="montagnarde" data-name="Montagnarde" data-price="13.50" data-keywords="tomate montagnarde pomme de terre patate andouille guémené guemene lardons persillade">
+            <article class="pizza-card" data-menu-item data-id="montagnarde" data-name="Montagnarde" data-price="13.50" data-ingredients="Sauce tomate, fromage, pomme de terre, andouille de Guémené, lardons, persillade" data-keywords="tomate montagnarde pomme de terre patate andouille guémené guemene lardons persillade">
               <div class="card-head"><h3>Montagnarde</h3><strong>13,50 €</strong></div>
-              <p>Sauce tomate, fromage, pomme de terre, andouille de Guémené, lardons, persillade.</p>
-              <div class="tag-row"><span>andouille</span><span>pomme de terre</span><span>lardons</span></div>
-              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+              <div class="card-footer">
+                <div class="ingredients-line">
+                  <span>Sauce tomate, fromage, pomme de terre, andouille de Guémené, lardons, persillade.</span>
+                  <button class="customize-btn" type="button" aria-label="Personnaliser Montagnarde" data-customize="montagnarde">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                  </button>
+                </div>
+                <div class="quantity-controls" data-qty-for="montagnarde">
+                  <button class="qty-btn plus" type="button" data-qty-plus="montagnarde">+</button>
+                </div>
+              </div>
             </article>
 
-            <article class="pizza-card" data-menu-item data-id="la-gourmande" data-name="La gourmande" data-price="13.00" data-keywords="tomate gourmande champignons poitrine porc gorgonzola poivrons fromage">
+            <article class="pizza-card" data-menu-item data-id="la-gourmande" data-name="La gourmande" data-price="13.00" data-ingredients="Sauce tomate, fromage, champignons, poitrine de porc, gorgonzola, poivrons" data-keywords="tomate gourmande champignons poitrine porc gorgonzola poivrons fromage">
               <div class="card-head"><h3>La gourmande</h3><strong>13,00 €</strong></div>
-              <p>Sauce tomate, fromage, champignons, poitrine de porc, gorgonzola, poivrons.</p>
-              <div class="tag-row"><span>gorgonzola</span><span>poitrine</span><span>poivrons</span></div>
-              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+              <div class="card-footer">
+                <div class="ingredients-line">
+                  <span>Sauce tomate, fromage, champignons, poitrine de porc, gorgonzola, poivrons.</span>
+                  <button class="customize-btn" type="button" aria-label="Personnaliser La gourmande" data-customize="la-gourmande">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                  </button>
+                </div>
+                <div class="quantity-controls" data-qty-for="la-gourmande">
+                  <button class="qty-btn plus" type="button" data-qty-plus="la-gourmande">+</button>
+                </div>
+              </div>
             </article>
 
-            <article class="pizza-card" data-menu-item data-id="bretonne" data-name="Bretonne" data-price="14.50" data-keywords="tomate bretonne bretagne champignons andouille guémené guemene saint jacques st jacques persillade mer">
+            <article class="pizza-card" data-menu-item data-id="bretonne" data-name="Bretonne" data-price="14.50" data-ingredients="Sauce tomate, fromage, champignons, andouille de Guémené, Saint-Jacques, persillade" data-keywords="tomate bretonne bretagne champignons andouille guémené guemene saint jacques st jacques persillade mer">
               <div class="card-head"><h3>Bretonne</h3><strong>14,50 €</strong></div>
-              <p>Sauce tomate, fromage, champignons, andouille de Guémené, Saint-Jacques, persillade.</p>
-              <div class="tag-row"><span>andouille</span><span>Saint-Jacques</span><span>bretonne</span></div>
-              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+              <div class="card-footer">
+                <div class="ingredients-line">
+                  <span>Sauce tomate, fromage, champignons, andouille de Guémené, Saint-Jacques, persillade.</span>
+                  <button class="customize-btn" type="button" aria-label="Personnaliser Bretonne" data-customize="bretonne">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                  </button>
+                </div>
+                <div class="quantity-controls" data-qty-for="bretonne">
+                  <button class="qty-btn plus" type="button" data-qty-plus="bretonne">+</button>
+                </div>
+              </div>
             </article>
 
-            <article class="pizza-card" data-menu-item data-id="napolitaine" data-name="Napolitaine" data-price="12.50" data-keywords="tomate napolitaine napoli jambon anchois olives fromage">
+            <article class="pizza-card" data-menu-item data-id="napolitaine" data-name="Napolitaine" data-price="12.50" data-ingredients="Sauce tomate, fromage, jambon, tomate, anchois, olives" data-keywords="tomate napolitaine napoli jambon anchois olives fromage">
               <div class="card-head"><h3>Napolitaine</h3><strong>12,50 €</strong></div>
-              <p>Sauce tomate, fromage, jambon, tomate, anchois, olives.</p>
-              <div class="tag-row"><span>anchois</span><span>olives</span><span>jambon</span></div>
-              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+              <div class="card-footer">
+                <div class="ingredients-line">
+                  <span>Sauce tomate, fromage, jambon, tomate, anchois, olives.</span>
+                  <button class="customize-btn" type="button" aria-label="Personnaliser Napolitaine" data-customize="napolitaine">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                  </button>
+                </div>
+                <div class="quantity-controls" data-qty-for="napolitaine">
+                  <button class="qty-btn plus" type="button" data-qty-plus="napolitaine">+</button>
+                </div>
+              </div>
             </article>
 
-            <article class="pizza-card" data-menu-item data-id="orientale" data-name="L'Orientale" data-price="13.50" data-keywords="tomate orientale agneau boulettes oignons poivrons champignons épicée epice">
+            <article class="pizza-card" data-menu-item data-id="orientale" data-name="L'Orientale" data-price="13.50" data-ingredients="Sauce tomate, fromage, champignons, oignons, poivrons, boulettes d'agneau" data-keywords="tomate orientale agneau boulettes oignons poivrons champignons épicée epice">
               <div class="card-head"><h3>L'Orientale</h3><strong>13,50 €</strong></div>
-              <p>Sauce tomate, fromage, champignons, oignons, poivrons, boulettes d'agneau.</p>
-              <div class="tag-row"><span>agneau</span><span>poivrons</span><span>épicée</span></div>
-              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+              <div class="card-footer">
+                <div class="ingredients-line">
+                  <span>Sauce tomate, fromage, champignons, oignons, poivrons, boulettes d'agneau.</span>
+                  <button class="customize-btn" type="button" aria-label="Personnaliser L'Orientale" data-customize="orientale">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                  </button>
+                </div>
+                <div class="quantity-controls" data-qty-for="orientale">
+                  <button class="qty-btn plus" type="button" data-qty-plus="orientale">+</button>
+                </div>
+              </div>
             </article>
 
-            <article class="pizza-card" data-menu-item data-id="kebab" data-name="Kebab" data-price="13.50" data-keywords="tomate kebab viande sauce blanche oignons tomates champignons fromage">
+            <article class="pizza-card" data-menu-item data-id="kebab" data-name="Kebab" data-price="13.50" data-ingredients="Sauce tomate, fromage, champignons, oignons, tomates, viande kebab, sauce blanche" data-keywords="tomate kebab viande sauce blanche oignons tomates champignons fromage">
               <div class="card-head"><h3>Kebab</h3><strong>13,50 €</strong></div>
-              <p>Sauce tomate, fromage, champignons, oignons, tomates, viande kebab, sauce blanche.</p>
-              <div class="tag-row"><span>kebab</span><span>sauce blanche</span><span>oignons</span></div>
-              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+              <div class="card-footer">
+                <div class="ingredients-line">
+                  <span>Sauce tomate, fromage, champignons, oignons, tomates, viande kebab, sauce blanche.</span>
+                  <button class="customize-btn" type="button" aria-label="Personnaliser Kebab" data-customize="kebab">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                  </button>
+                </div>
+                <div class="quantity-controls" data-qty-for="kebab">
+                  <button class="qty-btn plus" type="button" data-qty-plus="kebab">+</button>
+                </div>
+              </div>
             </article>
 
-            <article class="pizza-card" data-menu-item data-id="nicoise" data-name="Niçoise" data-price="12.50" data-keywords="tomate niçoise nicoise thon anchois oignons olives poisson fromage">
+            <article class="pizza-card" data-menu-item data-id="nicoise" data-name="Niçoise" data-price="12.50" data-ingredients="Sauce tomate, fromage, thon, tomate, anchois, oignons, olives" data-keywords="tomate niçoise nicoise thon anchois oignons olives poisson fromage">
               <div class="card-head"><h3>Niçoise</h3><strong>12,50 €</strong></div>
-              <p>Sauce tomate, fromage, thon, tomate, anchois, oignons, olives.</p>
-              <div class="tag-row"><span>thon</span><span>anchois</span><span>olives</span></div>
-              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+              <div class="card-footer">
+                <div class="ingredients-line">
+                  <span>Sauce tomate, fromage, thon, tomate, anchois, oignons, olives.</span>
+                  <button class="customize-btn" type="button" aria-label="Personnaliser Niçoise" data-customize="nicoise">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                  </button>
+                </div>
+                <div class="quantity-controls" data-qty-for="nicoise">
+                  <button class="qty-btn plus" type="button" data-qty-plus="nicoise">+</button>
+                </div>
+              </div>
             </article>
 
-            <article class="pizza-card" data-menu-item data-id="provencale" data-name="Provençale" data-price="13.00" data-keywords="tomate provençale provencale bolognaise aubergines oignons champignons légumes legumes">
+            <article class="pizza-card" data-menu-item data-id="provencale" data-name="Provençale" data-price="13.00" data-ingredients="Sauce tomate, fromage, champignons, bolognaise, aubergines, oignons" data-keywords="tomate provençale provencale bolognaise aubergines oignons champignons légumes legumes">
               <div class="card-head"><h3>Provençale</h3><strong>13,00 €</strong></div>
-              <p>Sauce tomate, fromage, champignons, bolognaise, aubergines, oignons.</p>
-              <div class="tag-row"><span>aubergines</span><span>bolognaise</span><span>oignons</span></div>
-              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+              <div class="card-footer">
+                <div class="ingredients-line">
+                  <span>Sauce tomate, fromage, champignons, bolognaise, aubergines, oignons.</span>
+                  <button class="customize-btn" type="button" aria-label="Personnaliser Provençale" data-customize="provencale">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                  </button>
+                </div>
+                <div class="quantity-controls" data-qty-for="provencale">
+                  <button class="qty-btn plus" type="button" data-qty-plus="provencale">+</button>
+                </div>
+              </div>
             </article>
 
-            <article class="pizza-card" data-menu-item data-id="landaise" data-name="Landaise" data-price="13.50" data-keywords="tomate landaise jambon de pays chorizo poivrons chèvre chevre fromage">
+            <article class="pizza-card" data-menu-item data-id="landaise" data-name="Landaise" data-price="13.50" data-ingredients="Sauce tomate, fromage, jambon de pays, chorizo, poivrons, chèvre" data-keywords="tomate landaise jambon de pays chorizo poivrons chèvre chevre fromage">
               <div class="card-head"><h3>Landaise</h3><strong>13,50 €</strong></div>
-              <p>Sauce tomate, fromage, jambon de pays, chorizo, poivrons, chèvre.</p>
-              <div class="tag-row"><span>jambon de pays</span><span>chorizo</span><span>chèvre</span></div>
-              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+              <div class="card-footer">
+                <div class="ingredients-line">
+                  <span>Sauce tomate, fromage, jambon de pays, chorizo, poivrons, chèvre.</span>
+                  <button class="customize-btn" type="button" aria-label="Personnaliser Landaise" data-customize="landaise">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                  </button>
+                </div>
+                <div class="quantity-controls" data-qty-for="landaise">
+                  <button class="qty-btn plus" type="button" data-qty-plus="landaise">+</button>
+                </div>
+              </div>
             </article>
 
-            <article class="pizza-card" data-menu-item data-id="pizza-du-soleil" data-name="Pizza du soleil" data-price="13.00" data-keywords="tomate soleil végétarien vegetarien champignons aubergines tomates chèvre chevre persillade légumes legumes">
+            <article class="pizza-card" data-menu-item data-id="pizza-du-soleil" data-name="Pizza du soleil" data-price="13.00" data-ingredients="Sauce tomate, fromage, champignons, aubergines, tomates, chèvre, persillade" data-keywords="tomate soleil végétarien vegetarien champignons aubergines tomates chèvre chevre persillade légumes legumes">
               <div class="card-head"><h3>Pizza du soleil</h3><strong>13,00 €</strong></div>
-              <p>Sauce tomate, fromage, champignons, aubergines, tomates, chèvre, persillade.</p>
-              <div class="tag-row"><span>légumes</span><span>chèvre</span><span>persillade</span></div>
-              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+              <div class="card-footer">
+                <div class="ingredients-line">
+                  <span>Sauce tomate, fromage, champignons, aubergines, tomates, chèvre, persillade.</span>
+                  <button class="customize-btn" type="button" aria-label="Personnaliser Pizza du soleil" data-customize="pizza-du-soleil">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                  </button>
+                </div>
+                <div class="quantity-controls" data-qty-for="pizza-du-soleil">
+                  <button class="qty-btn plus" type="button" data-qty-plus="pizza-du-soleil">+</button>
+                </div>
+              </div>
             </article>
 
-            <article class="pizza-card" data-menu-item data-id="curry" data-name="Curry" data-price="13.00" data-keywords="tomate curry poulet poivrons oignons épicée epice indienne fromage">
+            <article class="pizza-card" data-menu-item data-id="curry" data-name="Curry" data-price="13.00" data-ingredients="Sauce tomate, fromage, poulet au curry, poivrons, oignons" data-keywords="tomate curry poulet poivrons oignons épicée epice indienne fromage">
               <div class="card-head"><h3>Curry</h3><strong>13,00 €</strong></div>
-              <p>Sauce tomate, fromage, poulet au curry, poivrons, oignons.</p>
-              <div class="tag-row"><span>poulet</span><span>curry</span><span>poivrons</span></div>
-              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+              <div class="card-footer">
+                <div class="ingredients-line">
+                  <span>Sauce tomate, fromage, poulet au curry, poivrons, oignons.</span>
+                  <button class="customize-btn" type="button" aria-label="Personnaliser Curry" data-customize="curry">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                  </button>
+                </div>
+                <div class="quantity-controls" data-qty-for="curry">
+                  <button class="qty-btn plus" type="button" data-qty-plus="curry">+</button>
+                </div>
+              </div>
             </article>
 
-            <article class="pizza-card" data-menu-item data-id="burger" data-name="BURGER (nouvelle)" data-price="13.50" data-keywords="tomate burger nouvelle hamburger cheeseburger viande hachée hachee cheddar sauce burger oignons">
+            <article class="pizza-card" data-menu-item data-id="burger" data-name="BURGER (nouvelle)" data-price="13.50" data-ingredients="Sauce tomate, fromage, viande hachée, tomate, oignons, cheddar, sauce burger" data-keywords="tomate burger nouvelle hamburger cheeseburger viande hachée hachee cheddar sauce burger oignons">
               <div class="card-head"><h3>Burger <small>nouvelle</small></h3><strong>13,50 €</strong></div>
-              <p>Sauce tomate, fromage, viande hachée, tomate, oignons, cheddar, sauce burger.</p>
-              <div class="tag-row"><span>nouvelle</span><span>burger</span><span>cheddar</span></div>
-              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+              <div class="card-footer">
+                <div class="ingredients-line">
+                  <span>Sauce tomate, fromage, viande hachée, tomate, oignons, cheddar, sauce burger.</span>
+                  <button class="customize-btn" type="button" aria-label="Personnaliser Burger" data-customize="burger">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                  </button>
+                </div>
+                <div class="quantity-controls" data-qty-for="burger">
+                  <button class="qty-btn plus" type="button" data-qty-plus="burger">+</button>
+                </div>
+              </div>
             </article>
           </div>
         </section>
@@ -338,53 +541,109 @@
             </div>
           </div>
           <div class="pizza-grid">
-            <article class="pizza-card" data-menu-item data-id="saumon-creme" data-name="Saumon" data-price="13.00" data-keywords="crème creme fraiche saumon poisson mer persillade fromage">
+            <article class="pizza-card" data-menu-item data-id="saumon-creme" data-name="Saumon" data-price="13.00" data-ingredients="Crème fraîche, fromage, saumon, persillade" data-keywords="crème creme fraiche saumon poisson mer persillade fromage">
               <div class="card-head"><h3>Saumon</h3><strong>13,00 €</strong></div>
-              <p>Crème fraîche, fromage, saumon, persillade.</p>
-              <div class="tag-row"><span>crème</span><span>saumon</span><span>mer</span></div>
-              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+              <div class="card-footer">
+                <div class="ingredients-line">
+                  <span>Crème fraîche, fromage, saumon, persillade.</span>
+                  <button class="customize-btn" type="button" aria-label="Personnaliser Saumon" data-customize="saumon-creme">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                  </button>
+                </div>
+                <div class="quantity-controls" data-qty-for="saumon-creme">
+                  <button class="qty-btn plus" type="button" data-qty-plus="saumon-creme">+</button>
+                </div>
+              </div>
             </article>
 
-            <article class="pizza-card" data-menu-item data-id="tartiflette" data-name="Tartiflette" data-price="13.00" data-keywords="crème creme fraiche tartiflette lardons pomme de terre patate oignons reblochon fromage montagne">
+            <article class="pizza-card" data-menu-item data-id="tartiflette" data-name="Tartiflette" data-price="13.00" data-ingredients="Crème fraîche, fromage, lardons, pomme de terre, oignons, reblochon" data-keywords="crème creme fraiche tartiflette lardons pomme de terre patate oignons reblochon fromage montagne">
               <div class="card-head"><h3>Tartiflette</h3><strong>13,00 €</strong></div>
-              <p>Crème fraîche, fromage, lardons, pomme de terre, oignons, reblochon.</p>
-              <div class="tag-row"><span>reblochon</span><span>lardons</span><span>pomme de terre</span></div>
-              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+              <div class="card-footer">
+                <div class="ingredients-line">
+                  <span>Crème fraîche, fromage, lardons, pomme de terre, oignons, reblochon.</span>
+                  <button class="customize-btn" type="button" aria-label="Personnaliser Tartiflette" data-customize="tartiflette">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                  </button>
+                </div>
+                <div class="quantity-controls" data-qty-for="tartiflette">
+                  <button class="qty-btn plus" type="button" data-qty-plus="tartiflette">+</button>
+                </div>
+              </div>
             </article>
 
-            <article class="pizza-card" data-menu-item data-id="pyreneenne" data-name="La Pyrénéenne" data-price="12.50" data-keywords="crème creme fraiche pyrénéenne pyreneenne chorizo chèvre chevre miel oignons sucré salé sucre sale">
+            <article class="pizza-card" data-menu-item data-id="pyreneenne" data-name="La Pyrénéenne" data-price="12.50" data-ingredients="Crème fraîche, fromage, oignons, chorizo, chèvre, miel" data-keywords="crème creme fraiche pyrénéenne pyreneenne chorizo chèvre chevre miel oignons sucré salé sucre sale">
               <div class="card-head"><h3>La Pyrénéenne</h3><strong>12,50 €</strong></div>
-              <p>Crème fraîche, fromage, oignons, chorizo, chèvre, miel.</p>
-              <div class="tag-row"><span>chèvre</span><span>miel</span><span>chorizo</span></div>
-              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+              <div class="card-footer">
+                <div class="ingredients-line">
+                  <span>Crème fraîche, fromage, oignons, chorizo, chèvre, miel.</span>
+                  <button class="customize-btn" type="button" aria-label="Personnaliser La Pyrénéenne" data-customize="pyreneenne">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                  </button>
+                </div>
+                <div class="quantity-controls" data-qty-for="pyreneenne">
+                  <button class="qty-btn plus" type="button" data-qty-plus="pyreneenne">+</button>
+                </div>
+              </div>
             </article>
 
-            <article class="pizza-card" data-menu-item data-id="flamenkuche" data-name="Flamenkuche" data-price="12.00" data-keywords="crème creme fraiche flamenkuche flammekueche flammenkueche flambée flambe lardons champignons oignons alsacienne">
+            <article class="pizza-card" data-menu-item data-id="flamenkuche" data-name="Flamenkuche" data-price="12.00" data-ingredients="Crème fraîche, fromage, lardons, champignons, oignons" data-keywords="crème creme fraiche flamenkuche flammekueche flammenkueche flambée flambe lardons champignons oignons alsacienne">
               <div class="card-head"><h3>Flamenkuche</h3><strong>12,00 €</strong></div>
-              <p>Crème fraîche, fromage, lardons, champignons, oignons.</p>
-              <div class="tag-row"><span>lardons</span><span>oignons</span><span>champignons</span></div>
-              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+              <div class="card-footer">
+                <div class="ingredients-line">
+                  <span>Crème fraîche, fromage, lardons, champignons, oignons.</span>
+                  <button class="customize-btn" type="button" aria-label="Personnaliser Flamenkuche" data-customize="flamenkuche">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                  </button>
+                </div>
+                <div class="quantity-controls" data-qty-for="flamenkuche">
+                  <button class="qty-btn plus" type="button" data-qty-plus="flamenkuche">+</button>
+                </div>
+              </div>
             </article>
 
-            <article class="pizza-card" data-menu-item data-id="raclette" data-name="Raclette (nouvelle)" data-price="14.00" data-keywords="crème creme fraiche raclette nouvelle pomme de terre jambon bayonne reblochon miel oignons fromage">
+            <article class="pizza-card" data-menu-item data-id="raclette" data-name="Raclette (nouvelle)" data-price="14.00" data-ingredients="Crème fraîche, fromage, pomme de terre, oignons, jambon de Bayonne, reblochon, miel" data-keywords="crème creme fraiche raclette nouvelle pomme de terre jambon bayonne reblochon miel oignons fromage">
               <div class="card-head"><h3>Raclette <small>nouvelle</small></h3><strong>14,00 €</strong></div>
-              <p>Crème fraîche, fromage, pomme de terre, oignons, jambon de Bayonne, reblochon, miel.</p>
-              <div class="tag-row"><span>nouvelle</span><span>reblochon</span><span>miel</span></div>
-              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+              <div class="card-footer">
+                <div class="ingredients-line">
+                  <span>Crème fraîche, fromage, pomme de terre, oignons, jambon de Bayonne, reblochon, miel.</span>
+                  <button class="customize-btn" type="button" aria-label="Personnaliser Raclette" data-customize="raclette">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                  </button>
+                </div>
+                <div class="quantity-controls" data-qty-for="raclette">
+                  <button class="qty-btn plus" type="button" data-qty-plus="raclette">+</button>
+                </div>
+              </div>
             </article>
 
-            <article class="pizza-card" data-menu-item data-id="indienne" data-name="Indienne (nouvelle)" data-price="13.50" data-keywords="crème creme fraiche indienne nouvelle poulet curry chèvre chevre miel épicée epice">
+            <article class="pizza-card" data-menu-item data-id="indienne" data-name="Indienne (nouvelle)" data-price="13.50" data-ingredients="Crème fraîche, fromage, poulet curry, chèvre, miel" data-keywords="crème creme fraiche indienne nouvelle poulet curry chèvre chevre miel épicée epice">
               <div class="card-head"><h3>Indienne <small>nouvelle</small></h3><strong>13,50 €</strong></div>
-              <p>Crème fraîche, fromage, poulet curry, chèvre, miel.</p>
-              <div class="tag-row"><span>nouvelle</span><span>poulet</span><span>curry</span></div>
-              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+              <div class="card-footer">
+                <div class="ingredients-line">
+                  <span>Crème fraîche, fromage, poulet curry, chèvre, miel.</span>
+                  <button class="customize-btn" type="button" aria-label="Personnaliser Indienne" data-customize="indienne">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                  </button>
+                </div>
+                <div class="quantity-controls" data-qty-for="indienne">
+                  <button class="qty-btn plus" type="button" data-qty-plus="indienne">+</button>
+                </div>
+              </div>
             </article>
 
-            <article class="pizza-card" data-menu-item data-id="bacon" data-name="Bacon (nouvelle)" data-price="13.50" data-keywords="crème creme fraiche bacon nouvelle reblochon chèvre chevre amandes miel sans miel fromage">
+            <article class="pizza-card" data-menu-item data-id="bacon" data-name="Bacon (nouvelle)" data-price="13.50" data-ingredients="Base crème fraîche, fromage, bacon, reblochon, amandes effilées, miel" data-keywords="crème creme fraiche bacon nouvelle reblochon chèvre chevre amandes miel sans miel fromage">
               <div class="card-head"><h3>Bacon <small>nouvelle</small></h3><strong>13,50 €</strong></div>
-              <p>Base crème fraîche, fromage, bacon, reblochon ou chèvre, amandes effilées, miel ou sans.</p>
-              <div class="tag-row"><span>nouvelle</span><span>bacon</span><span>amandes</span></div>
-              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+              <div class="card-footer">
+                <div class="ingredients-line">
+                  <span>Base crème fraîche, fromage, bacon, reblochon ou chèvre, amandes effilées, miel ou sans.</span>
+                  <button class="customize-btn" type="button" aria-label="Personnaliser Bacon" data-customize="bacon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                  </button>
+                </div>
+                <div class="quantity-controls" data-qty-for="bacon">
+                  <button class="qty-btn plus" type="button" data-qty-plus="bacon">+</button>
+                </div>
+              </div>
             </article>
           </div>
         </section>
@@ -398,25 +657,49 @@
             <p>Toutes nos pizzas sont disponibles en Vulcano avec un supplément de 1,50 €.</p>
           </div>
           <div class="pizza-grid compact-grid">
-            <article class="pizza-card" data-menu-item data-id="vulcano" data-name="Vulcano" data-price="13.00" data-keywords="vulcano soufflé souffle tomate jambon champignons fromage">
+            <article class="pizza-card" data-menu-item data-id="vulcano" data-name="Vulcano" data-price="13.00" data-ingredients="Sauce tomate, fromage, jambon, champignons" data-keywords="vulcano soufflé souffle tomate jambon champignons fromage">
               <div class="card-head"><h3>Vulcano</h3><strong>13,00 €</strong></div>
-              <p>Sauce tomate, fromage, jambon, champignons.</p>
-              <div class="tag-row"><span>soufflé</span><span>jambon</span><span>champignons</span></div>
-              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+              <div class="card-footer">
+                <div class="ingredients-line">
+                  <span>Sauce tomate, fromage, jambon, champignons.</span>
+                  <button class="customize-btn" type="button" aria-label="Personnaliser Vulcano" data-customize="vulcano">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                  </button>
+                </div>
+                <div class="quantity-controls" data-qty-for="vulcano">
+                  <button class="qty-btn plus" type="button" data-qty-plus="vulcano">+</button>
+                </div>
+              </div>
             </article>
 
-            <article class="pizza-card" data-menu-item data-id="vulcano-4-fromage" data-name="Vulcano 4 fromage" data-price="14.00" data-keywords="vulcano soufflé souffle quatre 4 fromage gorgonzola cantal chèvre chevre tomate">
+            <article class="pizza-card" data-menu-item data-id="vulcano-4-fromage" data-name="Vulcano 4 fromage" data-price="14.00" data-ingredients="Sauce tomate, fromage, gorgonzola, cantal, chèvre" data-keywords="vulcano soufflé souffle quatre 4 fromage gorgonzola cantal chèvre chevre tomate">
               <div class="card-head"><h3>Vulcano 4 fromage</h3><strong>14,00 €</strong></div>
-              <p>Sauce tomate, fromage, gorgonzola, cantal, chèvre.</p>
-              <div class="tag-row"><span>soufflé</span><span>fromage</span><span>chèvre</span></div>
-              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+              <div class="card-footer">
+                <div class="ingredients-line">
+                  <span>Sauce tomate, fromage, gorgonzola, cantal, chèvre.</span>
+                  <button class="customize-btn" type="button" aria-label="Personnaliser Vulcano 4 fromage" data-customize="vulcano-4-fromage">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                  </button>
+                </div>
+                <div class="quantity-controls" data-qty-for="vulcano-4-fromage">
+                  <button class="qty-btn plus" type="button" data-qty-plus="vulcano-4-fromage">+</button>
+                </div>
+              </div>
             </article>
 
-            <article class="pizza-card" data-menu-item data-id="vulcano-thon" data-name="Vulcano au thon" data-price="13.50" data-keywords="vulcano soufflé souffle thon poisson oignons poivrons persillade tomate">
+            <article class="pizza-card" data-menu-item data-id="vulcano-thon" data-name="Vulcano au thon" data-price="13.50" data-ingredients="Sauce tomate, fromage, thon, oignons, poivrons, persillade" data-keywords="vulcano soufflé souffle thon poisson oignons poivrons persillade tomate">
               <div class="card-head"><h3>Vulcano au thon</h3><strong>13,50 €</strong></div>
-              <p>Sauce tomate, fromage, thon, oignons, poivrons, persillade.</p>
-              <div class="tag-row"><span>soufflé</span><span>thon</span><span>poivrons</span></div>
-              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+              <div class="card-footer">
+                <div class="ingredients-line">
+                  <span>Sauce tomate, fromage, thon, oignons, poivrons, persillade.</span>
+                  <button class="customize-btn" type="button" aria-label="Personnaliser Vulcano au thon" data-customize="vulcano-thon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                  </button>
+                </div>
+                <div class="quantity-controls" data-qty-for="vulcano-thon">
+                  <button class="qty-btn plus" type="button" data-qty-plus="vulcano-thon">+</button>
+                </div>
+              </div>
             </article>
           </div>
         </section>
@@ -429,39 +712,56 @@
             </div>
           </div>
           <div class="pizza-grid compact-grid">
-            <article class="pizza-card" data-menu-item data-id="menu-enfant" data-name="Menu enfant" data-price="7.00" data-keywords="menu enfant bambino boisson dessert bonbon jambon tomate fromage">
+            <article class="pizza-card" data-menu-item data-id="menu-enfant" data-name="Menu enfant" data-price="7.00" data-ingredients="Pizza bambino, boisson, dessert, bonbon" data-keywords="menu enfant bambino boisson dessert bonbon jambon tomate fromage">
               <div class="card-head"><h3>Menu enfant</h3><strong>7,00 €</strong></div>
-              <p>1 pizza bambino, 1 boisson, 1 dessert, bonbon. Sauce tomate, fromage, jambon.</p>
-              <div class="tag-row"><span>enfant</span><span>bambino</span><span>jambon</span></div>
-              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+              <div class="card-footer">
+                <div class="ingredients-line">
+                  <span>1 pizza bambino, 1 boisson, 1 dessert, bonbon.</span>
+                </div>
+                <div class="quantity-controls" data-qty-for="menu-enfant">
+                  <button class="qty-btn plus" type="button" data-qty-plus="menu-enfant">+</button>
+                </div>
+              </div>
             </article>
 
             <article class="pizza-card" data-menu-item data-id="coca-cola" data-name="Coca cola 1.5L" data-price="3.00" data-keywords="boisson coca cola soda 1.5l bouteille">
               <div class="card-head"><h3>Coca cola 1,5L</h3><strong>3,00 €</strong></div>
-              <p>Boisson 1,5 L.</p>
-              <div class="tag-row"><span>boisson</span><span>soda</span></div>
-              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+              <div class="card-footer">
+                <div class="ingredients-line"><span>Boisson 1,5 L.</span></div>
+                <div class="quantity-controls" data-qty-for="coca-cola">
+                  <button class="qty-btn plus" type="button" data-qty-plus="coca-cola">+</button>
+                </div>
+              </div>
             </article>
 
             <article class="pizza-card" data-menu-item data-id="orangina" data-name="Orangina 1.5L" data-price="3.00" data-keywords="boisson orangina soda 1.5l bouteille">
               <div class="card-head"><h3>Orangina 1,5L</h3><strong>3,00 €</strong></div>
-              <p>Boisson 1,5 L.</p>
-              <div class="tag-row"><span>boisson</span><span>soda</span></div>
-              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+              <div class="card-footer">
+                <div class="ingredients-line"><span>Boisson 1,5 L.</span></div>
+                <div class="quantity-controls" data-qty-for="orangina">
+                  <button class="qty-btn plus" type="button" data-qty-plus="orangina">+</button>
+                </div>
+              </div>
             </article>
 
             <article class="pizza-card" data-menu-item data-id="desperados" data-name="Desperados 33cl" data-price="4.00" data-keywords="boisson bière biere desperados 33cl">
               <div class="card-head"><h3>Desperados 33cl</h3><strong>4,00 €</strong></div>
-              <p>Bière 33 cl.</p>
-              <div class="tag-row"><span>boisson</span><span>bière</span></div>
-              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+              <div class="card-footer">
+                <div class="ingredients-line"><span>Bière 33 cl.</span></div>
+                <div class="quantity-controls" data-qty-for="desperados">
+                  <button class="qty-btn plus" type="button" data-qty-plus="desperados">+</button>
+                </div>
+              </div>
             </article>
 
             <article class="pizza-card" data-menu-item data-id="rose" data-name="Rosé 75cl" data-price="7.00" data-keywords="boisson vin rosé rose 75cl bouteille">
               <div class="card-head"><h3>Rosé 75cl</h3><strong>7,00 €</strong></div>
-              <p>Vin rosé 75 cl.</p>
-              <div class="tag-row"><span>boisson</span><span>vin</span></div>
-              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+              <div class="card-footer">
+                <div class="ingredients-line"><span>Vin rosé 75 cl.</span></div>
+                <div class="quantity-controls" data-qty-for="rose">
+                  <button class="qty-btn plus" type="button" data-qty-plus="rose">+</button>
+                </div>
+              </div>
             </article>
           </div>
         </section>
@@ -473,6 +773,37 @@
       <a href="tel:+33297893599">02 97 89 35 99</a>
     </footer>
 
-    <script src="menu.js?v=20260521-mobile" defer></script>
+    <!-- Customization Modal -->
+    <div class="modal-overlay" id="customizeModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="modalPizzaName">Personnaliser</h2>
+          <button class="icon-button" id="closeModal" type="button">×</button>
+        </div>
+        <div class="modal-body">
+          <div class="collapse-section" id="sectionRemove">
+            <button class="collapse-trigger" type="button">Retirer des ingrédients</button>
+            <div class="collapse-content">
+              <div class="ingredient-list" id="removeList"></div>
+            </div>
+          </div>
+          <div class="collapse-section" id="sectionAdd">
+            <button class="collapse-trigger" type="button">Ajouter des ingrédients</button>
+            <div class="collapse-content">
+              <div class="add-ing-search">
+                <input type="search" id="ingSearch" placeholder="Rechercher un ingrédient...">
+              </div>
+              <div class="ingredient-list" id="addList"></div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="button button-ghost" id="cancelModal">Annuler</button>
+          <button class="button button-primary" id="saveModal">Valider</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="menu.js?v=20260522-custom" defer></script>
   </body>
 </html>
