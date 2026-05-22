@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Menu Pizza-Bella Lanester | Pizzas à emporter</title>
+    <meta
+      name="description"
+      content="Menu Pizza-Bella Lanester : pizzas base tomate, base crème fraîche, soufflés, menu enfant et boissons. Recherche par ingrédient et calepin de commande."
+    >
+    <link rel="canonical" href="https://pizzabella.rouf.me/menu.html">
+    <meta property="og:title" content="Menu Pizza-Bella Lanester">
+    <meta property="og:description" content="Consultez les pizzas disponibles, recherchez par ingrédient et gardez vos choix dans un calepin.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pizzabella.rouf.me/menu.html">
+    <meta property="og:image" content="https://static.wixstatic.com/media/843343_ccfe324e93fd4e18b210bcc2876e4890~mv2_d_2775_1979_s_2.jpg/v1/fill/w_1200,h_860,al_c,q_85,enc_avif,quality_auto/843343_ccfe324e93fd4e18b210bcc2876e4890~mv2_d_2775_1979_s_2.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://static.wixstatic.com">
+    <link rel="stylesheet" href="styles.css?v=20260521-mobile">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Menu",
+        "@id": "https://pizzabella.rouf.me/menu.html#menu",
+        "name": "Menu Pizza-Bella Lanester",
+        "url": "https://pizzabella.rouf.me/menu.html",
+        "inLanguage": "fr-FR",
+        "hasMenuSection": [
+          {
+            "@type": "MenuSection",
+            "name": "Pizzas base sauce tomate 33 cm"
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Pizzas base crème fraîche 33 cm"
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Les soufflés"
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Menu enfant et boissons"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body class="menu-page">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Pizza-Bella Lanester, accueil">
+        <span>Pizza-Bella</span>
+        <small>Lanester</small>
+      </a>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a aria-current="page" href="menu.html">Menu</a>
+        <a href="tel:+33297893599">Appeler</a>
+      </nav>
+    </header>
+
+    <button class="notepad-toggle" id="notepadToggle" type="button" aria-controls="orderPad" aria-expanded="false">
+      <span>Calepin</span>
+      <strong id="notepadCount">0</strong>
+    </button>
+
+    <aside class="order-pad" id="orderPad" aria-hidden="true" aria-labelledby="orderPadTitle">
+      <div class="pad-header">
+        <div>
+          <p class="kicker">Commande de groupe</p>
+          <h2 id="orderPadTitle">Calepin</h2>
+        </div>
+        <button class="icon-button" id="closePad" type="button" aria-label="Réduire le calepin">×</button>
+      </div>
+      <ul class="pad-list" id="padList"></ul>
+      <p class="pad-empty" id="padEmpty">Aucune pizza sélectionnée.</p>
+      <div class="pad-total">
+        <span>Total indicatif</span>
+        <strong id="padTotal">0,00 €</strong>
+      </div>
+      <div class="pad-actions">
+        <a class="button button-primary" href="tel:+33297893599">Appeler</a>
+        <button class="button button-ghost" id="clearPad" type="button">Vider</button>
+      </div>
+      <p class="pad-note">Le calepin ne transmet pas de commande en ligne.</p>
+    </aside>
+
+    <main>
+      <section class="menu-hero">
+        <div>
+          <p class="kicker">Menu à emporter</p>
+          <h1>Les pizzas Pizza-Bella</h1>
+          <p>
+            Pizzas artisanales de 33 cm, ingrédients frais et commande par
+            téléphone au <a href="tel:+33297893599">02 97 89 35 99</a>.
+          </p>
+        </div>
+      </section>
+
+      <section class="menu-toolbar" aria-label="Recherche et filtres du menu">
+        <label class="search-box" for="menuSearch">
+          <span>Recherche</span>
+          <input id="menuSearch" type="search" placeholder="chèvre, saumon, végétarienne, kebab..." autocomplete="off">
+        </label>
+        <div class="filter-row" aria-label="Filtres rapides">
+          <button class="filter-chip is-active" type="button" data-filter="">Tout</button>
+          <button class="filter-chip" type="button" data-filter="tomate">Base tomate</button>
+          <button class="filter-chip" type="button" data-filter="crème creme fraiche">Base crème</button>
+          <button class="filter-chip" type="button" data-filter="fromage chèvre gorgonzola roquefort reblochon cantal">Fromage</button>
+          <button class="filter-chip" type="button" data-filter="végétarien vegetarien légumes legumes">Végétarien</button>
+          <button class="filter-chip" type="button" data-filter="mer saumon thon saint-jacques crevettes">Mer</button>
+          <button class="filter-chip" type="button" data-filter="épicée epice merguez chorizo curry orientale">Épicé</button>
+          <button class="filter-chip" type="button" data-filter="nouvelle burger raclette indienne bacon">Nouveautés</button>
+        </div>
+        <p class="result-count" id="resultCount" aria-live="polite">44 produits affichés</p>
+      </section>
+
+      <section class="menu-content" id="menuList">
+        <section class="menu-section" data-menu-section>
+          <div class="menu-section-heading">
+            <div>
+              <p class="kicker">33 cm</p>
+              <h2>Pizzas base sauce tomate</h2>
+            </div>
+            <p>Ingrédient supplémentaire : 1,50 €. Saint-Jacques, saumon ou andouille : 2,50 €.</p>
+          </div>
+          <div class="pizza-grid">
+            <article class="pizza-card" data-menu-item data-id="roma" data-name="Roma" data-price="10.50" data-keywords="tomate classique jambon tomates fromage simple traditionnelle">
+              <div class="card-head"><h3>Roma</h3><strong>10,50 €</strong></div>
+              <p>Sauce tomate, fromage, jambon, tomates.</p>
+              <div class="tag-row"><span>classique</span><span>jambon</span><span>tomate</span></div>
+              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+            </article>
+
+            <article class="pizza-card" data-menu-item data-id="reine" data-name="Reine" data-price="11.00" data-keywords="tomate reine royale jambon champignons oeuf fromage classique">
+              <div class="card-head"><h3>Reine</h3><strong>11,00 €</strong></div>
+              <p>Sauce tomate, fromage, jambon, champignons, avec ou sans oeuf.</p>
+              <div class="tag-row"><span>classique</span><span>champignons</span><span>oeuf</span></div>
+              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+            </article>
+
+            <article class="pizza-card" data-menu-item data-id="foresta" data-name="Foresta" data-price="12.50" data-keywords="tomate forestière forestiere jambon champignons lardons persillade fromage">
+              <div class="card-head"><h3>Foresta</h3><strong>12,50 €</strong></div>
+              <p>Sauce tomate, fromage, jambon, champignons, lardons, persillade.</p>
+              <div class="tag-row"><span>champignons</span><span>lardons</span><span>persillade</span></div>
+              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+            </article>
+
+            <article class="pizza-card" data-menu-item data-id="roquefort" data-name="Roquefort" data-price="12.50" data-keywords="tomate roquefort fromage bleu jambon champignons">
+              <div class="card-head"><h3>Roquefort</h3><strong>12,50 €</strong></div>
+              <p>Sauce tomate, fromage, jambon, champignons, roquefort.</p>
+              <div class="tag-row"><span>fromage</span><span>roquefort</span><span>jambon</span></div>
+              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+            </article>
+
+            <article class="pizza-card" data-menu-item data-id="4-fromages" data-name="4 Fromages" data-price="13.00" data-keywords="tomate quatre fromages 4 fromage chèvre chevre gorgonzola cantal végétarien vegetarien">
+              <div class="card-head"><h3>4 Fromages</h3><strong>13,00 €</strong></div>
+              <p>Sauce tomate, fromage à pizza, chèvre, gorgonzola, cantal.</p>
+              <div class="tag-row"><span>fromage</span><span>chèvre</span><span>végétarien</span></div>
+              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+            </article>
+
+            <article class="pizza-card" data-menu-item data-id="cinq-fromages" data-name="Cinq fromages" data-price="13.50" data-keywords="tomate cinq 5 fromages chèvre chevre gorgonzola cantal roquefort végétarien vegetarien">
+              <div class="card-head"><h3>Cinq fromages</h3><strong>13,50 €</strong></div>
+              <p>Sauce tomate, fromage à pizza, chèvre, gorgonzola, cantal, roquefort.</p>
+              <div class="tag-row"><span>fromage</span><span>roquefort</span><span>végétarien</span></div>
+              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+            </article>
+
+            <article class="pizza-card" data-menu-item data-id="quatre-saisons" data-name="Quatre saisons" data-price="12.50" data-keywords="tomate quatre saisons 4 saisons jambon champignons poivrons artichaut olives légumes legumes">
+              <div class="card-head"><h3>Quatre saisons</h3><strong>12,50 €</strong></div>
+              <p>Sauce tomate, fromage, jambon, champignons, poivrons, artichaut, olives.</p>
+              <div class="tag-row"><span>légumes</span><span>jambon</span><span>olives</span></div>
+              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+            </article>
+
+            <article class="pizza-card" data-menu-item data-id="bergere" data-name="Bergère" data-price="12.50" data-keywords="tomate bergere bergère lardons chèvre chevre chorizo fromage">
+              <div class="card-head"><h3>Bergère</h3><strong>12,50 €</strong></div>
+              <p>Sauce tomate, fromage, lardons, chèvre, chorizo.</p>
+              <div class="tag-row"><span>chèvre</span><span>chorizo</span><span>lardons</span></div>
+              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+            </article>
+
+            <article class="pizza-card" data-menu-item data-id="al-tono" data-name="Al tono" data-price="12.50" data-keywords="tomate thon tonno poisson oignons poivrons persillade fromage">
+              <div class="card-head"><h3>Al tono</h3><strong>12,50 €</strong></div>
+              <p>Sauce tomate, fromage, thon, oignons, poivrons, persillade.</p>
+              <div class="tag-row"><span>thon</span><span>poivrons</span><span>persillade</span></div>
+              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+            </article>
+
+            <article class="pizza-card" data-menu-item data-id="la-bolo" data-name="La bolo" data-price="12.50" data-keywords="tomate bolo bolognaise viande hachée hachee champignons fromage">
+              <div class="card-head"><h3>La bolo</h3><strong>12,50 €</strong></div>
+              <p>Sauce tomate, fromage, champignons, bolognaise.</p>
+              <div class="tag-row"><span>bolognaise</span><span>champignons</span><span>viande</span></div>
+              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+            </article>
+
+            <article class="pizza-card" data-menu-item data-id="bayonne" data-name="Bayonne" data-price="13.00" data-keywords="tomate bayonne jambon de pays tomates fraîches fraiches chèvre chevre fromage">
+              <div class="card-head"><h3>Bayonne</h3><strong>13,00 €</strong></div>
+              <p>Sauce tomate, fromage, jambon de pays, tomates fraîches, chèvre.</p>
+              <div class="tag-row"><span>jambon de pays</span><span>chèvre</span><span>tomates</span></div>
+              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+            </article>
+
+            <article class="pizza-card" data-menu-item data-id="la-texas" data-name="La texas" data-price="13.00" data-keywords="tomate texas texane bolognaise oignons poivrons persillade épices epices viande">
+              <div class="card-head"><h3>La texas</h3><strong>13,00 €</strong></div>
+              <p>Sauce tomate, fromage, bolognaise, oignons, poivrons, persillade, épices.</p>
+              <div class="tag-row"><span>épicée</span><span>bolognaise</span><span>poivrons</span></div>
+              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+            </article>
+
+            <article class="pizza-card" data-menu-item data-id="vegetarienne" data-name="Végétarienne" data-price="12.50" data-keywords="tomate végétarienne vegetarienne veggie légumes legumes poivrons champignons artichaut oignons olives sans viande">
+              <div class="card-head"><h3>Végétarienne</h3><strong>12,50 €</strong></div>
+              <p>Sauce tomate, fromage, poivrons, champignons, artichaut, oignons, olives.</p>
+              <div class="tag-row"><span>végétarien</span><span>légumes</span><span>olives</span></div>
+              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+            </article>
+
+            <article class="pizza-card" data-menu-item data-id="marrakech" data-name="Marrakech" data-price="13.00" data-keywords="tomate marrakech orientale merguez chorizo oignons poivrons épicée epice fromage">
+              <div class="card-head"><h3>Marrakech</h3><strong>13,00 €</strong></div>
+              <p>Sauce tomate, fromage, merguez, chorizo, oignons, poivrons.</p>
+              <div class="tag-row"><span>merguez</span><span>chorizo</span><span>épicée</span></div>
+              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+            </article>
+
+            <article class="pizza-card" data-menu-item data-id="sicilienne" data-name="Sicilienne" data-price="12.50" data-keywords="tomate sicilienne lardons jambon merguez viande fromage">
+              <div class="card-head"><h3>Sicilienne</h3><strong>12,50 €</strong></div>
+              <p>Sauce tomate, fromage, lardons, jambon, merguez.</p>
+              <div class="tag-row"><span>jambon</span><span>merguez</span><span>lardons</span></div>
+              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+            </article>
+
+            <article class="pizza-card" data-menu-item data-id="lanesterienne" data-name="Lanesterienne" data-price="13.50" data-keywords="tomate lanesterienne lanestérienne saint jacques st jacques champignons oignons lardons persillade mer">
+              <div class="card-head"><h3>Lanesterienne</h3><strong>13,50 €</strong></div>
+              <p>Sauce tomate, fromage, Saint-Jacques, champignons, oignons, lardons, persillade.</p>
+              <div class="tag-row"><span>Saint-Jacques</span><span>lardons</span><span>persillade</span></div>
+              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+            </article>
+
+            <article class="pizza-card" data-menu-item data-id="pizza-de-la-mer" data-name="Pizza de la mer" data-price="14.50" data-keywords="tomate mer saumon saint jacques st jacques crevettes roses poisson fruits de mer persillade">
+              <div class="card-head"><h3>Pizza de la mer</h3><strong>14,50 €</strong></div>
+              <p>Sauce tomate, fromage, saumon, Saint-Jacques, crevettes roses, persillade.</p>
+              <div class="tag-row"><span>mer</span><span>saumon</span><span>crevettes</span></div>
+              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+            </article>
+
+            <article class="pizza-card" data-menu-item data-id="montagnarde" data-name="Montagnarde" data-price="13.50" data-keywords="tomate montagnarde pomme de terre patate andouille guémené guemene lardons persillade">
+              <div class="card-head"><h3>Montagnarde</h3><strong>13,50 €</strong></div>
+              <p>Sauce tomate, fromage, pomme de terre, andouille de Guémené, lardons, persillade.</p>
+              <div class="tag-row"><span>andouille</span><span>pomme de terre</span><span>lardons</span></div>
+              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+            </article>
+
+            <article class="pizza-card" data-menu-item data-id="la-gourmande" data-name="La gourmande" data-price="13.00" data-keywords="tomate gourmande champignons poitrine porc gorgonzola poivrons fromage">
+              <div class="card-head"><h3>La gourmande</h3><strong>13,00 €</strong></div>
+              <p>Sauce tomate, fromage, champignons, poitrine de porc, gorgonzola, poivrons.</p>
+              <div class="tag-row"><span>gorgonzola</span><span>poitrine</span><span>poivrons</span></div>
+              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+            </article>
+
+            <article class="pizza-card" data-menu-item data-id="bretonne" data-name="Bretonne" data-price="14.50" data-keywords="tomate bretonne bretagne champignons andouille guémené guemene saint jacques st jacques persillade mer">
+              <div class="card-head"><h3>Bretonne</h3><strong>14,50 €</strong></div>
+              <p>Sauce tomate, fromage, champignons, andouille de Guémené, Saint-Jacques, persillade.</p>
+              <div class="tag-row"><span>andouille</span><span>Saint-Jacques</span><span>bretonne</span></div>
+              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+            </article>
+
+            <article class="pizza-card" data-menu-item data-id="napolitaine" data-name="Napolitaine" data-price="12.50" data-keywords="tomate napolitaine napoli jambon anchois olives fromage">
+              <div class="card-head"><h3>Napolitaine</h3><strong>12,50 €</strong></div>
+              <p>Sauce tomate, fromage, jambon, tomate, anchois, olives.</p>
+              <div class="tag-row"><span>anchois</span><span>olives</span><span>jambon</span></div>
+              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+            </article>
+
+            <article class="pizza-card" data-menu-item data-id="orientale" data-name="L'Orientale" data-price="13.50" data-keywords="tomate orientale agneau boulettes oignons poivrons champignons épicée epice">
+              <div class="card-head"><h3>L'Orientale</h3><strong>13,50 €</strong></div>
+              <p>Sauce tomate, fromage, champignons, oignons, poivrons, boulettes d'agneau.</p>
+              <div class="tag-row"><span>agneau</span><span>poivrons</span><span>épicée</span></div>
+              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+            </article>
+
+            <article class="pizza-card" data-menu-item data-id="kebab" data-name="Kebab" data-price="13.50" data-keywords="tomate kebab viande sauce blanche oignons tomates champignons fromage">
+              <div class="card-head"><h3>Kebab</h3><strong>13,50 €</strong></div>
+              <p>Sauce tomate, fromage, champignons, oignons, tomates, viande kebab, sauce blanche.</p>
+              <div class="tag-row"><span>kebab</span><span>sauce blanche</span><span>oignons</span></div>
+              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+            </article>
+
+            <article class="pizza-card" data-menu-item data-id="nicoise" data-name="Niçoise" data-price="12.50" data-keywords="tomate niçoise nicoise thon anchois oignons olives poisson fromage">
+              <div class="card-head"><h3>Niçoise</h3><strong>12,50 €</strong></div>
+              <p>Sauce tomate, fromage, thon, tomate, anchois, oignons, olives.</p>
+              <div class="tag-row"><span>thon</span><span>anchois</span><span>olives</span></div>
+              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+            </article>
+
+            <article class="pizza-card" data-menu-item data-id="provencale" data-name="Provençale" data-price="13.00" data-keywords="tomate provençale provencale bolognaise aubergines oignons champignons légumes legumes">
+              <div class="card-head"><h3>Provençale</h3><strong>13,00 €</strong></div>
+              <p>Sauce tomate, fromage, champignons, bolognaise, aubergines, oignons.</p>
+              <div class="tag-row"><span>aubergines</span><span>bolognaise</span><span>oignons</span></div>
+              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+            </article>
+
+            <article class="pizza-card" data-menu-item data-id="landaise" data-name="Landaise" data-price="13.50" data-keywords="tomate landaise jambon de pays chorizo poivrons chèvre chevre fromage">
+              <div class="card-head"><h3>Landaise</h3><strong>13,50 €</strong></div>
+              <p>Sauce tomate, fromage, jambon de pays, chorizo, poivrons, chèvre.</p>
+              <div class="tag-row"><span>jambon de pays</span><span>chorizo</span><span>chèvre</span></div>
+              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+            </article>
+
+            <article class="pizza-card" data-menu-item data-id="pizza-du-soleil" data-name="Pizza du soleil" data-price="13.00" data-keywords="tomate soleil végétarien vegetarien champignons aubergines tomates chèvre chevre persillade légumes legumes">
+              <div class="card-head"><h3>Pizza du soleil</h3><strong>13,00 €</strong></div>
+              <p>Sauce tomate, fromage, champignons, aubergines, tomates, chèvre, persillade.</p>
+              <div class="tag-row"><span>légumes</span><span>chèvre</span><span>persillade</span></div>
+              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+            </article>
+
+            <article class="pizza-card" data-menu-item data-id="curry" data-name="Curry" data-price="13.00" data-keywords="tomate curry poulet poivrons oignons épicée epice indienne fromage">
+              <div class="card-head"><h3>Curry</h3><strong>13,00 €</strong></div>
+              <p>Sauce tomate, fromage, poulet au curry, poivrons, oignons.</p>
+              <div class="tag-row"><span>poulet</span><span>curry</span><span>poivrons</span></div>
+              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+            </article>
+
+            <article class="pizza-card" data-menu-item data-id="burger" data-name="BURGER (nouvelle)" data-price="13.50" data-keywords="tomate burger nouvelle hamburger cheeseburger viande hachée hachee cheddar sauce burger oignons">
+              <div class="card-head"><h3>Burger <small>nouvelle</small></h3><strong>13,50 €</strong></div>
+              <p>Sauce tomate, fromage, viande hachée, tomate, oignons, cheddar, sauce burger.</p>
+              <div class="tag-row"><span>nouvelle</span><span>burger</span><span>cheddar</span></div>
+              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+            </article>
+          </div>
+        </section>
+
+        <section class="menu-section" data-menu-section>
+          <div class="menu-section-heading">
+            <div>
+              <p class="kicker">33 cm</p>
+              <h2>Pizzas base crème fraîche</h2>
+            </div>
+          </div>
+          <div class="pizza-grid">
+            <article class="pizza-card" data-menu-item data-id="saumon-creme" data-name="Saumon" data-price="13.00" data-keywords="crème creme fraiche saumon poisson mer persillade fromage">
+              <div class="card-head"><h3>Saumon</h3><strong>13,00 €</strong></div>
+              <p>Crème fraîche, fromage, saumon, persillade.</p>
+              <div class="tag-row"><span>crème</span><span>saumon</span><span>mer</span></div>
+              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+            </article>
+
+            <article class="pizza-card" data-menu-item data-id="tartiflette" data-name="Tartiflette" data-price="13.00" data-keywords="crème creme fraiche tartiflette lardons pomme de terre patate oignons reblochon fromage montagne">
+              <div class="card-head"><h3>Tartiflette</h3><strong>13,00 €</strong></div>
+              <p>Crème fraîche, fromage, lardons, pomme de terre, oignons, reblochon.</p>
+              <div class="tag-row"><span>reblochon</span><span>lardons</span><span>pomme de terre</span></div>
+              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+            </article>
+
+            <article class="pizza-card" data-menu-item data-id="pyreneenne" data-name="La Pyrénéenne" data-price="12.50" data-keywords="crème creme fraiche pyrénéenne pyreneenne chorizo chèvre chevre miel oignons sucré salé sucre sale">
+              <div class="card-head"><h3>La Pyrénéenne</h3><strong>12,50 €</strong></div>
+              <p>Crème fraîche, fromage, oignons, chorizo, chèvre, miel.</p>
+              <div class="tag-row"><span>chèvre</span><span>miel</span><span>chorizo</span></div>
+              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+            </article>
+
+            <article class="pizza-card" data-menu-item data-id="flamenkuche" data-name="Flamenkuche" data-price="12.00" data-keywords="crème creme fraiche flamenkuche flammekueche flammenkueche flambée flambe lardons champignons oignons alsacienne">
+              <div class="card-head"><h3>Flamenkuche</h3><strong>12,00 €</strong></div>
+              <p>Crème fraîche, fromage, lardons, champignons, oignons.</p>
+              <div class="tag-row"><span>lardons</span><span>oignons</span><span>champignons</span></div>
+              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+            </article>
+
+            <article class="pizza-card" data-menu-item data-id="raclette" data-name="Raclette (nouvelle)" data-price="14.00" data-keywords="crème creme fraiche raclette nouvelle pomme de terre jambon bayonne reblochon miel oignons fromage">
+              <div class="card-head"><h3>Raclette <small>nouvelle</small></h3><strong>14,00 €</strong></div>
+              <p>Crème fraîche, fromage, pomme de terre, oignons, jambon de Bayonne, reblochon, miel.</p>
+              <div class="tag-row"><span>nouvelle</span><span>reblochon</span><span>miel</span></div>
+              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+            </article>
+
+            <article class="pizza-card" data-menu-item data-id="indienne" data-name="Indienne (nouvelle)" data-price="13.50" data-keywords="crème creme fraiche indienne nouvelle poulet curry chèvre chevre miel épicée epice">
+              <div class="card-head"><h3>Indienne <small>nouvelle</small></h3><strong>13,50 €</strong></div>
+              <p>Crème fraîche, fromage, poulet curry, chèvre, miel.</p>
+              <div class="tag-row"><span>nouvelle</span><span>poulet</span><span>curry</span></div>
+              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+            </article>
+
+            <article class="pizza-card" data-menu-item data-id="bacon" data-name="Bacon (nouvelle)" data-price="13.50" data-keywords="crème creme fraiche bacon nouvelle reblochon chèvre chevre amandes miel sans miel fromage">
+              <div class="card-head"><h3>Bacon <small>nouvelle</small></h3><strong>13,50 €</strong></div>
+              <p>Base crème fraîche, fromage, bacon, reblochon ou chèvre, amandes effilées, miel ou sans.</p>
+              <div class="tag-row"><span>nouvelle</span><span>bacon</span><span>amandes</span></div>
+              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+            </article>
+          </div>
+        </section>
+
+        <section class="menu-section" data-menu-section>
+          <div class="menu-section-heading">
+            <div>
+              <p class="kicker">Soufflés</p>
+              <h2>Les Vulcano</h2>
+            </div>
+            <p>Toutes nos pizzas sont disponibles en Vulcano avec un supplément de 1,50 €.</p>
+          </div>
+          <div class="pizza-grid compact-grid">
+            <article class="pizza-card" data-menu-item data-id="vulcano" data-name="Vulcano" data-price="13.00" data-keywords="vulcano soufflé souffle tomate jambon champignons fromage">
+              <div class="card-head"><h3>Vulcano</h3><strong>13,00 €</strong></div>
+              <p>Sauce tomate, fromage, jambon, champignons.</p>
+              <div class="tag-row"><span>soufflé</span><span>jambon</span><span>champignons</span></div>
+              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+            </article>
+
+            <article class="pizza-card" data-menu-item data-id="vulcano-4-fromage" data-name="Vulcano 4 fromage" data-price="14.00" data-keywords="vulcano soufflé souffle quatre 4 fromage gorgonzola cantal chèvre chevre tomate">
+              <div class="card-head"><h3>Vulcano 4 fromage</h3><strong>14,00 €</strong></div>
+              <p>Sauce tomate, fromage, gorgonzola, cantal, chèvre.</p>
+              <div class="tag-row"><span>soufflé</span><span>fromage</span><span>chèvre</span></div>
+              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+            </article>
+
+            <article class="pizza-card" data-menu-item data-id="vulcano-thon" data-name="Vulcano au thon" data-price="13.50" data-keywords="vulcano soufflé souffle thon poisson oignons poivrons persillade tomate">
+              <div class="card-head"><h3>Vulcano au thon</h3><strong>13,50 €</strong></div>
+              <p>Sauce tomate, fromage, thon, oignons, poivrons, persillade.</p>
+              <div class="tag-row"><span>soufflé</span><span>thon</span><span>poivrons</span></div>
+              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+            </article>
+          </div>
+        </section>
+
+        <section class="menu-section" data-menu-section>
+          <div class="menu-section-heading">
+            <div>
+              <p class="kicker">À côté</p>
+              <h2>Menu enfant et boissons</h2>
+            </div>
+          </div>
+          <div class="pizza-grid compact-grid">
+            <article class="pizza-card" data-menu-item data-id="menu-enfant" data-name="Menu enfant" data-price="7.00" data-keywords="menu enfant bambino boisson dessert bonbon jambon tomate fromage">
+              <div class="card-head"><h3>Menu enfant</h3><strong>7,00 €</strong></div>
+              <p>1 pizza bambino, 1 boisson, 1 dessert, bonbon. Sauce tomate, fromage, jambon.</p>
+              <div class="tag-row"><span>enfant</span><span>bambino</span><span>jambon</span></div>
+              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+            </article>
+
+            <article class="pizza-card" data-menu-item data-id="coca-cola" data-name="Coca cola 1.5L" data-price="3.00" data-keywords="boisson coca cola soda 1.5l bouteille">
+              <div class="card-head"><h3>Coca cola 1,5L</h3><strong>3,00 €</strong></div>
+              <p>Boisson 1,5 L.</p>
+              <div class="tag-row"><span>boisson</span><span>soda</span></div>
+              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+            </article>
+
+            <article class="pizza-card" data-menu-item data-id="orangina" data-name="Orangina 1.5L" data-price="3.00" data-keywords="boisson orangina soda 1.5l bouteille">
+              <div class="card-head"><h3>Orangina 1,5L</h3><strong>3,00 €</strong></div>
+              <p>Boisson 1,5 L.</p>
+              <div class="tag-row"><span>boisson</span><span>soda</span></div>
+              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+            </article>
+
+            <article class="pizza-card" data-menu-item data-id="desperados" data-name="Desperados 33cl" data-price="4.00" data-keywords="boisson bière biere desperados 33cl">
+              <div class="card-head"><h3>Desperados 33cl</h3><strong>4,00 €</strong></div>
+              <p>Bière 33 cl.</p>
+              <div class="tag-row"><span>boisson</span><span>bière</span></div>
+              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+            </article>
+
+            <article class="pizza-card" data-menu-item data-id="rose" data-name="Rosé 75cl" data-price="7.00" data-keywords="boisson vin rosé rose 75cl bouteille">
+              <div class="card-head"><h3>Rosé 75cl</h3><strong>7,00 €</strong></div>
+              <p>Vin rosé 75 cl.</p>
+              <div class="tag-row"><span>boisson</span><span>vin</span></div>
+              <label class="select-line"><input type="checkbox" data-note-toggle>Ajouter au calepin</label>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Commande uniquement par téléphone, pizzas à emporter.</p>
+      <a href="tel:+33297893599">02 97 89 35 99</a>
+    </footer>
+
+    <script src="menu.js?v=20260521-mobile" defer></script>
+  </body>
+</html>
